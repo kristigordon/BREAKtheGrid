@@ -1,0 +1,57 @@
+# 1. Retrieve the list of participants and their current status (mic on/off, video on/off, screen sharing on/off) from the Zoom API.
+# 2. Calculate the priority for each participant based on their status, following the order given in the prompt (screen share > mic+camera on > mic on > camera on > mic+camera off).
+# 3. Sort the list of participants based on their priority, from highest to lowest.
+# 4. Determine the desired size of each box for each participant, based on their priority. For example, the largest screen share participant might get 2/3 of 5. the screen, while the smallest mic+camera off participant might get 1/6 of the screen.
+# 6. Allow the user to change the size of each box individually by dragging its borders. As the user changes the size of a box, adjust the size of the other boxes accordingly to maintain the desired proportions.
+# 7. If the user does not manually resize any boxes, display the boxes with the predetermined sizes based on their priority.
+
+// 1. Retrieve the list of participants and their status from the Zoom API
+participants = getParticipantsFromAPI();
+
+// 2. Calculate the priority for each participant
+for participant in participants:
+    if participant.screenSharing:
+        participant.priority = 5
+    else if participant.micOn and participant.cameraOn:
+        participant.priority = 4
+    else if participant.micOn:
+        participant.priority = 3
+    else if participant.cameraOn:
+        participant.priority = 2
+    else:
+        participant.priority = 1
+
+// 3. Sort the list of participants based on their priority
+sortedParticipants = sort(participants, key=lambda x: x.priority, reverse=True)
+
+// 4. Determine the desired size of each box for each participant
+for i, participant in enumerate(sortedParticipants):
+    if participant.screenSharing:
+        participant.size = (2/3, 2/3)
+    elif participant.micOn and participant.cameraOn:
+        participant.size = (1/3, 1/3)
+    elif participant.micOn:
+        participant.size = (1/6, 1/6)
+    elif participant.cameraOn:
+        participant.size = (1/6, 1/6)
+    else:
+        participant.size = (1/6, 1/6)
+
+// 5. Allow the user to change the size of each box individually
+while not done:
+    for participant in sortedParticipants:
+        participant.box.setSize(participant.size)
+        // Adjust the size of the other boxes accordingly to maintain the desired proportions
+        totalWidth = sum(p.size[0] for p in sortedParticipants)
+        totalHeight = sum(p.size[1] for p in sortedParticipants)
+        if totalWidth != 1:
+            for p in sortedParticipants:
+                p.size[0] *= 1/totalWidth
+        if totalHeight != 1:
+            for p in sortedParticipants:
+                p.size[1] *= 1/totalHeight
+
+// 6. If the user does not manually resize any boxes, display the boxes with the predetermined sizes based on their priority
+for participant in sortedParticipants:
+    participant.box.setSize(participant.size)
+
