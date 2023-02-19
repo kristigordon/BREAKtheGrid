@@ -1,0 +1,75 @@
+# This code creates a Grid class that stores the colors of each button in a 2D list. 
+# It also creates a GridGUI class that uses tkinter to create a window with a grid of buttons, and a color picker button. 
+# When a button is clicked, it toggles between black and white. 
+
+# When the color picker button is clicked, a color selection dialog appears 
+# and sets the color of all the buttons to the selected color. 
+
+# Using tkinter, I was able to create a GridGUI class to add additional functionality to a video conferencing software, such as Zoom.
+
+import tkinter as tk
+from tkinter.colorchooser import askcolor
+
+class Grid:
+    def __init__(self, rows, columns):
+        # Initialize the grid with the specified number of rows and columns
+        self.rows = rows
+        self.columns = columns
+        # Initialize the colors of each button to white
+        self.colors = [['white' for _ in range(columns)] for _ in range(rows)]
+
+    def set_color(self, row, column, color):
+        # Set the color of a button at a given row and column
+        self.colors[row][column] = color
+
+    def get_color(self, row, column):
+        # Get the color of a button at a given row and column
+        return self.colors[row][column]
+
+class GridGUI:
+    def __init__(self, rows, columns):
+        # Create a new Grid object with the specified number of rows and columns
+        self.grid = Grid(rows, columns)
+        # Create a new Tkinter window
+        self.root = tk.Tk()
+        # Create a 2D list of buttons and add them to the window
+        self.buttons = []
+        for row in range(rows):
+            button_row = []
+            for column in range(columns):
+                button = tk.Button(self.root, width=2, height=1, bg='white',
+                                   command=lambda row=row, column=column: self.on_button_click(row, column))
+                button.grid(row=row, column=column)
+                button_row.append(button)
+            self.buttons.append(button_row)
+        # Create a color picker button and add it to the window
+        self.color_picker_button = tk.Button(self.root, text="Pick Color", command=self.on_color_picker_click)
+        self.color_picker_button.grid(row=rows, column=0, columnspan=columns)
+
+    def on_button_click(self, row, column):
+        # When a button is clicked, toggle its color between black and white
+        color = self.grid.get_color(row, column)
+        if color == 'white':
+            color = 'black'
+        else:
+            color = 'white'
+        self.grid.set_color(row, column, color)
+        self.buttons[row][column].configure(bg=color)
+
+    def on_color_picker_click(self):
+        # When the color picker button is clicked, open a color selection dialog
+        color = askcolor()[1]
+        # Set the color of all buttons in the grid to the selected color
+        for row in range(self.grid.rows):
+            for column in range(self.grid.columns):
+                self.grid.set_color(row, column, color)
+                self.buttons[row][column].configure(bg=color)
+
+    def run(self):
+        # Start the Tkinter main loop to display the window
+        self.root.mainloop()
+
+# Create a new GridGUI object with 8 rows and 8 columns
+gui = GridGUI(8, 8)
+# Run the GUI
+gui.run()
