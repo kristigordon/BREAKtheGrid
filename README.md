@@ -1,27 +1,27 @@
 # BREAKtheGrid
 Break out of the black box and allow users to show their creativity while increasing productivity. This hybrid work solution will make collaboration easier, more accessible, and much more enjoyable.
 
-# Zoom Engage
 <p align="center">
 <img width="811" alt="Screen Shot 2023-02-18 at 10 49 18 PM" src="https://user-images.githubusercontent.com/66803124/219945596-73c3faa6-d330-484a-b551-379822832c4d.png">
 
 
 
-Engage busts out of the black square grid and allows the user to show their creativity while increasing productivity. Engage will make collaboration easier, more effective, and much more enjoyable.
+Break the Grid busts out of the black square grid and allows the user to show their creativity while increasing productivity. This will make collaboration easier, more effective, and much more enjoyable.
 
-
+<img width="889" alt="Screen Shot 2023-02-19 at 6 45 49 AM" src="https://user-images.githubusercontent.com/66803124/219946058-bc0e46b5-edbe-4ac3-8d6a-4e4cbbd07897.png">
 
 As a remote worker, I am constantly thinking of ways to improve video conferencing. 
 
 The large black boxes on my screen all day have always felt uninspiring. Seeing online classrooms is even more jarring. In school, the teachers would always decorate their rooms with so much color and vibrance. Where is that vibrance now? 
 
-With Zoom Engage, I wanted to bring it back. In doing so, Zoom can leverage the preference shown to its platform to pull ahead in market share.
+I wanted to bring it back. In doing so, Zoom can leverage the preference shown to its platform to pull ahead in market share.
 
-<img width="480" alt="Screen Shot 2023-02-16 at 6 41 09 PM" src="https://user-images.githubusercontent.com/66803124/219512750-093f8197-0b8d-4f12-8249-a4cf22a2b0ac.png">
+
 
 SO many companies are trying to compete in the video conferencing arena. But they all use the same uninspired black boxes. 
 
 <img width="733" alt="Screen Shot 2023-02-16 at 6 48 37 PM" src="https://user-images.githubusercontent.com/66803124/219513706-23a7be51-03ed-44fd-b39f-77054cdf803d.png">
+
 
 ##### What if we broke away from this? <br>
 ##### What if we let the user decide what their work environment or classroom would look like? <br>
@@ -29,11 +29,16 @@ SO many companies are trying to compete in the video conferencing arena. But the
 ##### How much much more preference for the Zoom platform could we foster? <br>
 #### I am ready to find out. <br>
 
-# Introducing BREAK the Grid
+# Introducing BREAK the Grid  
+ 
+  <img width="888" alt="Screen Shot 2023-02-19 at 6 47 20 AM" src="https://user-images.githubusercontent.com/66803124/219946086-77279278-1631-40c2-b654-e2f78cd5ced7.png">
 
-<img width="480" alt="Screen Shot 2023-02-16 at 5 29 50 PM" src="https://user-images.githubusercontent.com/66803124/219513853-ebe698be-e923-44fc-a08f-819d10536a14.png">
+  
+<img width="887" alt="Screen Shot 2023-02-19 at 6 47 38 AM" src="https://user-images.githubusercontent.com/66803124/219946078-0cc48fb0-d632-4ba6-9868-c84b7cd1f021.png">
+  
+<img width="891" alt="Screen Shot 2023-02-19 at 6 46 55 AM" src="https://user-images.githubusercontent.com/66803124/219946100-18e8abe3-494e-46a0-8887-81c9bea0fa93.png">
 
-<img width="482" alt="Screen Shot 2023-02-16 at 5 29 32 PM" src="https://user-images.githubusercontent.com/66803124/219513866-2800e45a-1759-41e4-87f6-18f21ce45a93.png">
+
 
 ## For a new remote environments, whether that is at work, in the classroom, or catching up with friends, everyone deserves a place where they can feel like themselves and express their creativity. Not be boxed in. 
 
@@ -42,8 +47,8 @@ SO many companies are trying to compete in the video conferencing arena. But the
 
 <img width="481" alt="Screen Shot 2023-02-16 at 5 30 32 PM" src="https://user-images.githubusercontent.com/66803124/219513900-ea32c2a7-6612-4c60-9c7a-b9892f85c549.png">
 
+  <img width="888" alt="Screen Shot 2023-02-19 at 6 49 32 AM" src="https://user-images.githubusercontent.com/66803124/219946149-f6d419a6-523b-41d4-b55e-42c606c26f2f.png">
 
-<img width="750" alt="Screen Shot 2023-02-16 at 8 23 22 PM" src="https://user-images.githubusercontent.com/66803124/219525615-2735fc31-edef-4c9b-8fea-b7469843353c.png">
 </center>
 Zoom API: The Zoom API (Application Programming Interface) is a set of rules and protocols that allows software applications to interact with the Zoom platform. This solution uses the Zoom API to retrieve the list of participants and their current status (mic on/off, video on/off, screen sharing on/off).
 
@@ -113,7 +118,6 @@ Deploy the solution to a web server or cloud platform so that it can be accessed
 Information used to better understand ZOOM came from their community page and blog. 
 https://support.zoom.us/hc/en-us/articles/201362323-Adjusting-your-video-layout-during-a-virtual-meeting
 
-
-
+<img width="889" alt="Screen Shot 2023-02-19 at 6 48 15 AM" src="https://user-images.githubusercontent.com/66803124/219946172-a0959371-8bf3-4323-a6de-0154524bf3e2.png">
 
 
